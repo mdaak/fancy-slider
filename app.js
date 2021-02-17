@@ -27,14 +27,13 @@ const showImages = (images) => {
   })
 }
 // create-slider
-    
+// search button work on enter key 
   document.getElementById("search").addEventListener("keypress", function(event) {    
     if (event.key == 'Enter'){
       document.getElementById("search-btn").click();
     }   
 });
-
-
+// duration button work on enter key 
 document.getElementById("duration").addEventListener("keypress", function(event) {    
   if (event.key == 'Enter'){
     document.getElementById("create-slider").click();
@@ -143,7 +142,7 @@ searchBtn.addEventListener('click', function () {
   getImages(search.value)
   sliders.length = 0;  
 })
-
+//duration problem solved
 sliderBtn.addEventListener('click', function () {
   duration = document.getElementById('duration').value ||  1000;
   if (duration < 1000) {
